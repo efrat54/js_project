@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+}
+html,body{
+    height: 100%;
+    background-color: thistle;
+    direction: rtl;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.klicky{
+    background-color: rgb(96, 57, 96);
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 4px 8px 2px rgba(0,0,0,4);
+}
+.klicky .btn{
+    font-size:xx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(216, 163, 199);
+    width:30%;
+    height:30%;
+    margin:3px;
+}
+.texts{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.texts div{
+   padding: 5%;
+}
+.new-gamer1{
+    display: none;
+}
+.new-gamer2{
+    display: none;
+}
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    width: 100%;
+}
+#players-header {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px auto;
+    width: 80%;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+#result {
+    width: 50%;
+    height: 100px; /* מוסיף גובה כדי ליישר את התוכן אנכית */
+    margin: 0 auto;
+    font-size: 24px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+/* נקודת שבירה ראשונה: עד רוחב של 230  */
+@media (max-width: 230px) {
+    .klicky {
+        width: 100px;
+        height: 100px;
+    }
+    .klicky .btn {
+        font-size: medium;
+        width: 30%;
+        height: 30%;
+        margin: 1px;
+    }
+    .controls {
+        flex-direction: column;
+        gap: 5px;
+    }
+    #players-header {
+        font-size: 1em;
+    }
+}
+
+/* נקודת שבירה שנייה: מרוחב של 230 px עד רוחב של 300  */
+@media (min-width: 231px) and (max-width: 300px) {
+    .klicky {
+        width: 150px;
+        height: 150px;
+    }
+    .klicky .btn {
+        font-size: large;
+        width: 30%;
+        height: 30%;
+        margin: 2px;
+    }
+    .controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+    #players-header {
+        font-size: 1.5em;
+    }
+}
+
+/* נקודת שבירה שלישית: מרוחב של 300 ומעלה */
+@media (min-width: 301px) {
+    .klicky {
+        width: 220px;
+        height: 220px;
+    }
+    .klicky .btn {
+        font-size: xx-large;
+        width: 30%;
+        height: 30%;
+        margin: 3px;
+    }
+    .controls {
+        flex-direction: row;
+        gap: 20px;
+    }
+    #players-header {
+        font-size: 2em;
+    }
+}
